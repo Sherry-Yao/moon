@@ -1,0 +1,8 @@
+*.pyc
+*~
+conf/*.pyc
+conf/*~
+models/*.pyc
+models/*~
+handlers/*.pyc
+handlers/*~
