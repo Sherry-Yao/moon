@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-'''
-@author:sherry
-'''
-
 import pymongo
 
 class Database():
-    def __init__(self, root='localhost', port=27017, db_name='BookStore'):
+    def __init__(self, root='localhost', port=27017, db_name='moon'):
         self.connect(root, port, db_name)
         self.collection = None
 
@@ -63,27 +59,6 @@ class Database():
                 return items
         except pymongo.errors, e:
             print e
-
-        return
-
-    '''
-    # This module should be completed
-    # find().sort('id', pymongo.DESCENDING)
-    # find({}).count()
-    # find().limit(n).skip(m) => start index is 2 limit 3
-    def querysortitems(self, conditions, sorts):
-        try:
-            if self.collection and type(conditions) is dict:
-                raw_items = self.collection.find().sort(conditions)
-                items = []
-                for item in raw_items:
-                    items.append(item)
-                return items
-        except pymongo.errors, e:
-            print e
-
-    return
-    '''
 
     def queryallitems(self):
         try:
