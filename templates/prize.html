@@ -12,7 +12,9 @@
 
     <body>
     	<div class="view" width="100%">
-            `<img src="{{ static_url('img/prize.png') }}" style="position:absolute;left: 0;top:-12%;" width="100%" height="120%"/>
+            <p style="margin-left: 5%;margin-top:60%"> 兑奖码: </p>
+            <p style="margin-left: 10%;">{{ code }} </p>
+            <img src="{{ static_url('img/prize.png') }}" style="position:absolute;left: 0;top:-12%;z-index:-1" width="100%" height="120%"/>
     	</div>
 
         <!-- your app's js -->
